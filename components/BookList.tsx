@@ -8,7 +8,6 @@ interface Props {
 }
 
 const BookList = ({ title, books, containerClassName }: Props) => {
-  console.log(books)
   return (
     <section className={containerClassName}>
       <h2 className='font-bebas-neue text-4xl text-light-100'>{title}</h2>
