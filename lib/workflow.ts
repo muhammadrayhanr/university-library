@@ -3,11 +3,11 @@ import config from '@/lib/config';
 import { Client as QStashClient, resend } from '@upstash/qstash';
 
 export const workflowClient = new WorkflowClient({
-  baseUrl: config.env.uptash.qstashUrl,
-  token: config.env.uptash.qstashToken,
+  baseUrl: config.env.upstash.qstashUrl,
+  token: config.env.upstash.qstashToken,
 });
 
-const qstashClient = new QStashClient({ token: config.env.uptash.qstashToken });
+const qstashClient = new QStashClient({ token: config.env.upstash.qstashToken });
 
 export const sendEmail = async ({
   email,
@@ -24,7 +24,7 @@ export const sendEmail = async ({
       provider: resend({ token: config.env.resendToken }),
     },
     body: {
-      from: 'Rayhan <mail.bookwise-library.my.id>',
+      from: 'Rayhan <conand.doyle4869@gmail.com>',
       to: [email],
       subject,
       html: message,
