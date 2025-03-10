@@ -1,14 +1,14 @@
 'use client';
 import React from 'react';
-import { cn, getInitials } from '@/lib/utils';
-import { usePathname } from 'next/navigation';
+import { getInitials } from '@/lib/utils';
+// import { usePathname } from 'next/navigation';
 import { Avatar, AvatarFallback } from '@/components/ui/avatar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Session } from 'next-auth';
 
 const Header = ({session} : {session: Session}) => {
-  const pathName = usePathname();
+  // const pathName = usePathname();
 
   return (
     <header className='my-10 flex justify-between gap-5'>
@@ -17,7 +17,7 @@ const Header = ({session} : {session: Session}) => {
       </Link>
 
       <ul className='flex flex-row items-center gap-8'>
-        <li>
+        {/* <li>
           <Link
             href='/library'
             className={cn(
@@ -27,7 +27,7 @@ const Header = ({session} : {session: Session}) => {
           >
             Library
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href='/my-profile'>
             <Avatar>

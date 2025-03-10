@@ -15,7 +15,6 @@ const layout = async ({ children }: { children: ReactNode }) => {
   after(async () => {
     if (!session?.user?.id) return;
 
-    // get the user and see if the last activity date is today
     const user = await db
       .select()
       .from(users)
